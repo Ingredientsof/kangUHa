@@ -1,0 +1,361 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap');
+
+
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+/* /////////////////////////////// 메인 인텍스 코드 /////////////////////////////// */
+/* 링크 데코 없애기 */
+a {
+    text-decoration: none;
+    color: white;
+}
+
+#menu a:hover{
+    color: #BD100C;
+}
+
+
+/* 홈페이지 값 */
+html{
+    font-size: 10px;
+}
+
+
+/*몸통 설정*/
+body{
+    background-color: #0019FF;
+    width: 1440px;
+    margin: 0 auto;
+}
+
+
+/* /////////////////////////////// 메뉴 이름 /////////////////////////////// */
+
+header{
+    z-index:999; 
+
+    width: 100%;
+
+    height: 60px;
+    background-color: #0019FF;
+    color: white;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header p {
+    float: right;
+    font-size: 2.8rem; 
+    font-weight: 800;
+    z-index:999; 
+}
+
+
+#menu{  
+    background-color: #0019FF;
+    position: fixed;
+    width: 1440px;
+    height: 60px;
+    
+    /*4.5rem=45px*/
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index:999; 
+}
+
+#menu ul{
+    width: 500px;
+    float: left;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index:999; 
+}
+
+#menu ul li{
+    list-style: none;
+    user-select: none;
+    padding: 6px 0px;
+    z-index:999; 
+}
+
+
+/* /////////////////////////////// 내용물 /////////////////////////////// */
+.row{
+    width: 1440px;
+    display: flex;
+    margin: 0 auto;
+    /*부모 지정 해줘야함*/
+    position: relative;
+}
+
+.text-section {
+    position: relative;
+}
+
+.row{
+    width: 1440px;
+    display: flex;
+    margin: 0 auto;
+}
+
+.maintain {
+    position: absolute;
+}
+
+.image-container01 img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.image-container02 img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.image-container03 img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.image-container04 img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* 호버 효과 */
+.overlay01 {
+    position: absolute;
+    top: 0px;
+    left: 136px;
+    width: 1166px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0); /* 투명하게 설정 */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    opacity: 0;
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+}
+
+.image-container01:hover .overlay01 {
+    background-color: rgba(0, 0, 0, 0.5); /* 호버 시 어둡게 변함 */
+    opacity: 1;
+}
+
+.overlay02 {
+    position: absolute;
+    top: 0px;
+    left: 950px;
+    width: 352px;
+    height: 505px;
+    background-color: rgba(0, 0, 0, 0); /* 투명하게 설정 */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    opacity: 0;
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+}
+
+.image-container02:hover .overlay02 {
+    background-color: rgba(0, 0, 0, 0.5); /* 호버 시 어둡게 변함 */
+    opacity: 1;
+}
+
+.overlay03 {
+    position: absolute;
+    top: 0px;
+    left: 133px;
+    width: 352px;
+    height: 495px;
+    background-color: rgba(0, 0, 0, 0); /* 투명하게 설정 */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    opacity: 0;
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+}
+
+.image-container03:hover .overlay03 {
+    background-color: rgba(0, 0, 0, 0.5); /* 호버 시 어둡게 변함 */
+    opacity: 1;
+}
+
+.overlay04 {
+    position: absolute;
+    top: 0px;
+    left: 489px;
+    width: 350px;
+    height: 495px;
+    background-color: rgba(0, 0, 0, 0); /* 투명하게 설정 */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    opacity: 0;
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+}
+
+.image-container04:hover .overlay04 {
+    background-color: rgba(0, 0, 0, 0.5); /* 호버 시 어둡게 변함 */
+    opacity: 1;
+}
+
+
+
+
+/* 이미지 우짜지 */
+.img-C {
+    transform: scaleX(-1);
+
+    position: absolute;
+    top: 1405px;
+    left: 10px;
+    width: 972;
+    height: 706;
+    z-index: -1; 
+}
+
+.highlight {
+    background: linear-gradient(to top, #BD100C 40%, transparent 50%);
+    width: 610px;
+}
+
+.highlight2 {
+    background-color: #BD100C;
+    width: fit-content;
+}
+
+/* /////////////////////////////// 공통 구조 /////////////////////////////// */
+
+.col1{width: 8.33%; padding: 1rem;;}
+.col2{width: 16.66%; padding: 1rem;}
+.col3{width: 25%; padding: 1rem;}
+.col4{width: 33.33%; padding: 1rem;}
+.col5{width: 41.66%; padding: 1rem;}
+.col6{width: 50%; padding: 1rem;}
+.col7{width: 58.33%; padding: 1rem;}
+.col8{width: 66.66%; padding: 1rem;}
+.col9{width: 75%; padding: 1rem;}
+.col10{width: 88.88%; padding: 1rem;}
+.col11{width: 91.66%; padding: 1rem;}
+.col12{width: 100%; padding: 1rem;}
+
+.h-30{height: 30px;}
+.h-100{height: 100px;}
+.h-100{height: 150px;}
+.h-100{height: 200px;}
+.h-100{height: 300px;}
+
+.text-mainTitle{font-weight: 600; font-size: 6.5rem;}
+.text-subTitle{font-weight: 400; font-size: 4rem;}
+.text-content{font-weight: 300; font-size: 2rem;}
+.text-Hit{font-weight: 400; font-size: 3rem;}
+.text-Hit2{font-weight: 600; font-size: 3rem;}
+
+
+.text-menu{font-size: 1.6rem; font-weight: 700;}
+.text-kr-normal{font-family: "Noto Sans KR", sans-serif;}
+.text-en-normal{font-family: "Newsreader", sans-serif;}
+
+.text-white{color: white;}
+.text-gray{color: rgb(44, 49, 69);}
+.text-red{color: rgb(255, 0, 0);}
+.text-red2{color: #BD100C;}
+
+.text-center{text-align: center;}
+.text-left{text-align: left;}
+.text-right{text-align: right;}
+
+.img-fit{width: 100%;}
+
+.imageEffectHardlight {
+    mix-blend-mode: hard-light;
+    filter: contrast(1.5);
+}
+
+.imageEffectScreen {
+    mix-blend-mode: screen;
+    filter: contrast(1.5);
+}
+
+.imageEffectScreen2 {
+    mix-blend-mode: screen;
+    filter: contrast(0.8);
+}
+
+.no-drag{
+    user-select: none;
+}
+
+.bin00 {
+    width: 100px;
+    height: 100px;
+    background-color: #0019FF;
+}
+.bin02 {
+    width: 100px;
+    height: 40px;
+    background-color: #0019FF;
+}
+.bin02 {
+    width: 100px;
+    height: 60px;
+    background-color: #0019FF;
+}
+
+.fullIMG {
+    width: 100%;
+}
+
+.half00 {
+    width: 50%;
+    height: 50%;
+}
+
+
+/* 푸터 */
+footer{
+    height: 100px;
+    margin: 50px;
+    justify-content: space-between;
+}
+
+/* 커서 */
+.cursor {
+     /* 원의 크기 설정 */
+    width: 80px;
+    height: 100%;
+    background-image: url(Img/cursur/cursurGun.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    transition: transform 0.1s ease;
+    z-index: 1000;
+  }

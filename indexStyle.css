@@ -1,0 +1,662 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+/* /////////////////////////////// 메인 인텍스 코드 /////////////////////////////// */
+/* 링크 데코 없애기 */
+a {
+    text-decoration: none;
+    color: white;
+}
+
+#menu a:hover{
+    color: #BD100C;
+}
+
+
+/* 홈페이지 값 */
+html{
+    font-size: 10px;
+}
+
+
+/*몸통 설정*/
+body{
+    background-color: #0019FF;
+    width: 1440px;
+    margin: 0 auto;
+}
+
+
+/* /////////////////////////////// 메뉴 이름 /////////////////////////////// */
+
+header{
+    z-index:999; 
+
+    width: 100%;
+
+    height: 60px;
+    background-color: #0019FF;
+    color: white;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+header p {
+    float: right;
+    font-size: 2.8rem; 
+    font-weight: 800;
+}
+
+
+#menu{  
+    background-color: #0019FF;
+    position: fixed;
+    width: 1440px;
+    height: 60px;
+    
+    /*4.5rem=45px*/
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#menu ul{
+    width: 500px;
+    float: left;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#menu ul li{
+    list-style: none;
+    user-select: none;
+    padding: 6px 0px;
+}
+
+/* /////////////////////////////// 대문 이미지 설정 /////////////////////////////// */
+.image-section {
+    position: relative;
+}
+
+.background-image {
+    left: 0;
+    width: 1440px;
+    height: 883px;
+    object-fit: cover;
+    z-index: 1;
+}
+
+
+.overlay-image1 {
+    position: absolute;
+
+    top: 272px;
+    left: 0px;
+    width: 424px;
+    height: 405px;
+    transition: transform 1s ease, width 1s ease, height 1s ease;
+    z-index: 3;
+}
+
+.overlay-image2 {
+    position: absolute;
+    top: 272px;
+    left: 1006px;
+    width: 424px;
+    height: 405px;
+    transition: transform 1s ease, width 1s ease, height 1s ease;
+    z-index: 3;
+}
+
+
+.overlay-image3 {
+    position: absolute;
+    top: 412px;
+    left: 27px;
+    width: 1397px;
+    height: 60px;
+    z-index: 4;
+}
+
+/* 호버 효과 */
+
+.overlay-image2:hover {
+    transform: rotate(25deg);
+    top: 232px;
+    scale: 1.2;
+    z-index: 3;
+}
+
+.overlay-image1:hover {
+    transform: rotate(-25deg);
+    top: 232px;
+    scale: 1.2;
+    z-index: 3;
+}
+
+/* 호버시 변화 */
+/* 컬러 */
+.overlay-color1 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* 검은색 배경, 투명도 50% */
+    z-index: 1; /* 이미지 밑에 나타나게 함 */
+    display: none; /* 초기에는 숨김 */
+}
+
+.overlay-color2 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* 검은색 배경, 투명도 50% */
+    z-index: 1; /* 이미지 밑에 나타나게 함 */
+    display: none;
+}
+
+/* 텍스트 */
+.overlay-text1 {
+    position: absolute;
+    transform: rotate(-25deg);
+    z-index: 2;
+
+    top: 182px;
+    left: 300px;
+
+    color: white;
+    font-size: 6rem;
+    font-weight: 500;
+    opacity: 0; /* 초기에는 숨김 */
+    transition: opacity 0.3s ease; /* 부드러운 애니메이션 효과 */
+}
+
+.overlay-text2 {
+    position: absolute;
+    transform: rotate(25deg);
+    z-index: 2;
+
+    top: 182px;
+    left: 796px;
+    
+    color: white;
+    font-size: 6rem;
+    font-weight: 500;
+    opacity: 0; /* 초기에는 숨김 */
+    transition: opacity 0.3s ease; /* 부드러운 애니메이션 효과 */
+}
+
+
+.overlay-container1:hover .overlay-color1 {
+    display: block;
+}
+.overlay-container2:hover .overlay-color2 {
+    display: block;
+}
+
+.overlay-container1:hover .overlay-text1 {
+    opacity: 1; /* 호버 시 텍스트 나타나기 */
+}
+.overlay-container2:hover .overlay-text2 {
+    opacity: 1; /* 호버 시 텍스트 나타나기 */
+}
+
+
+.row{
+    width: 1440px;
+    display: flex;
+    margin: 0 auto;
+    /*부모 지정 해줘야함*/
+    position: relative;
+}
+
+
+/* /////////////////////////////// 연대기 코드 /////////////////////////////// */
+.history-section {
+    position: relative;
+}
+
+.dashCen {
+    position: absolute;
+    background-color: #FFFFFF;
+    width: 35px;
+    height: 4px;
+}
+
+
+/* 연대기 크기 */
+.History1 {
+    height: 800px;
+    margin: 0 auto;
+}
+
+.History2 {
+    height: 1000px;
+    margin: 0 auto;
+}
+
+.History3 {
+    height: 1000px;
+    margin: 0 auto;
+}
+
+.History4 {
+    height: 1200px;
+    margin: 0 auto;
+}
+
+
+/* 연대기시작 */
+.satartHSub{
+    position: absolute;
+    font-size: 3.5em;
+    font-weight: 500;
+    top: 305px; 
+    left: 604px;
+}
+
+.satartHSub2 {
+    position: absolute;
+    font-size: 2em;
+    font-weight: 400;
+    top: 465px; 
+    left: 614px;    
+}
+
+.satartHSub3 {
+    position: absolute;
+    font-size: 2em;
+    font-weight: 400;
+    top: 495px; 
+    left: 624px;    
+}
+
+@keyframes typing {
+    from {width: 0}
+  }
+
+@keyframes blink {
+    50% { border-color: transparent; }
+}
+
+
+.satartHMain{
+    position: absolute;
+    font-size: 11.5rem;
+    font-weight: 600;
+    top: 356px;
+    left: 604px;
+
+    /* 타이핑 효과*/
+    width: 470px;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 5px solid;
+    animation: typing 1s steps(25), blink .5s step-end infinite alternate;
+}
+
+
+
+/* 연대기1 */
+.whereBC {
+    position: absolute;
+    font-size: 4.5em;
+    font-weight: 500;
+    top: 187px; 
+    left: 487px;
+}
+
+.where17th {
+    position: absolute;
+    font-size: 8em;
+    font-weight: 700;
+    top: 246px; 
+    left: 482px;
+}
+
+.whereDesh17_6 {
+    position: absolute;
+    top: 361px;
+    left: 494px;
+}
+
+.where6th {
+    position: absolute;
+    font-size: 8em;
+    font-weight: 700;
+    top: 328px; 
+    left: 535px;
+}
+
+.whereKingdom {
+    position: absolute;
+    font-size: 5em;
+    font-weight: 600;
+    top: 260px; 
+    left: 129px;
+}
+
+.whereKingdom2 {
+    position: absolute;
+    font-size: 5em;
+    font-weight: 600;
+    top: 325px; 
+    left: 220px;
+}
+
+.whereHibriT {
+    position: absolute;
+    font-size: 1.8em;
+    font-weight: 400;
+    top: 424px; 
+    left: 0px;
+}
+
+.whereIsKImage1O {
+    position: absolute;
+    top: 260px; 
+    left: 634px;
+    width: 700px;
+    height: 463px;
+}
+
+.whereIsKImage1 {
+    position: absolute;
+    top: 320px; 
+    left: 673px;
+    width: 700px;
+    height: 463px;
+}
+
+/* 연대기 2 */
+.whereBC2 {
+    position: absolute;
+    font-size: 4.5em;
+    font-weight: 500;
+    top: 190px; 
+    left: 612px;
+}
+
+.where536 {
+    position: absolute;
+    font-size: 8em;
+    font-weight: 700;
+    top: 246px; 
+    left: 534px;
+}
+
+.whereDesh5_1 {
+    position: absolute;
+    top: 361px;
+    left: 494px;
+}
+
+.where142 {
+    position: absolute;
+    font-size: 8em;
+    font-weight: 700;
+    top: 328px; 
+    left: 535px;
+}
+
+.whereP {
+    position: absolute;
+    font-size: 5em;
+    font-weight: 600;
+    top: 240px; 
+    left: 720px;
+}
+
+.whereG {
+    position: absolute;
+    font-size: 5em;
+    font-weight: 600;
+    top: 305px; 
+    left: 720px;
+}
+
+.wherePGT {
+    position: absolute;
+    font-size: 1.8em;
+    font-weight: 400;
+    top: 400px; 
+    left: 720px;
+}
+
+.wherePGTImg {
+    position: absolute;
+    top: 280px; 
+    left: 100px;
+    width: 536px;
+    height: 423px;
+}
+
+.wherePGTImg0 {
+    position: absolute;
+    top: 320px; 
+    left: 60px;
+    width: 536px;
+    height: 423px;
+}
+
+
+/* 연대기 3 */
+.whereBC3 {
+    position: absolute;
+    font-size: 4.5em;
+    font-weight: 500;
+    top: 65px; 
+    left: 487px;
+}
+
+.whereAD {
+    position: absolute;
+    font-size: 4.5em;
+    font-weight: 500;
+    top: 250px; 
+    left: 604px;
+}
+
+.where63 {
+    position: absolute;
+    font-size: 8em;
+    font-weight: 700;
+    top: 120px; 
+    left: 482px;
+}
+
+.whereDeshAD {
+    position: absolute;
+    top: 230px;
+    left: 520px;
+    transform: rotate(90deg);
+}
+
+.where1917 {
+    position: absolute;
+    font-size: 8em;
+    font-weight: 700;
+    top: 305px; 
+    left: 482px;
+}
+
+.whereP {
+    position: absolute;
+    font-size: 5em;
+    font-weight: 600;
+    top: 240px; 
+    left: 720px;
+}
+
+.whereG {
+    position: absolute;
+    font-size: 5em;
+    font-weight: 600;
+    top: 305px; 
+    left: 720px;
+}
+
+.wherePGT1 {
+    position: absolute;
+    font-size: 1.8em;
+    font-weight: 400;
+    top: 400px; 
+    left: 720px;
+}
+
+.whereDate {
+    position: absolute;
+    font-size: 3em;
+    font-weight: 500;
+    top: 550px; 
+    left: 740px;
+}
+
+.whereWars {
+    position: absolute;
+    top: 660px; 
+    left: 10px;
+    width: 828px;
+    height: 394px;
+}
+
+.whereWars0 {
+    position: absolute;
+    top: 770px; 
+    left: 770px;
+    width: 600px;
+    height: 286px;
+}
+
+
+
+
+/* 네모 크기위치 */
+.square01 {
+    position: absolute;
+    background-color: #AE0000;
+    width: 220px;
+    height: 800px;
+    top: 0px;
+    left: 480px
+}
+
+.square02 {
+    position: absolute;
+    background-color: #AE0000;
+    width: 220px;
+    height: 1000px;
+    top: 0px;
+    left: 480px
+}
+
+.square03 {
+    position: absolute;
+    background-color: #AE0000;
+    width: 220px;
+    height: 1000px;
+    top: 0px;
+    left: 480px
+}
+
+.square04 {
+    position: absolute;
+    background-color: #AE0000;
+    width: 220px;
+    height: 1000px;
+    top: 0px;
+    left: 480px
+}
+
+
+
+
+/* 공통 구조 */
+.col1{width: 8.33%; padding: 1rem;;}
+.col2{width: 16.66%; padding: 1rem;}
+.col3{width: 25; padding: 1rem;}
+.col4{width: 33.33%; padding: 1rem;}
+.col5{width: 41.66%; padding: 1rem;}
+.col6{width: 50%; padding: 1rem;}
+.col7{width: 58.33%; padding: 1rem;}
+.col8{width: 66.66%; padding: 1rem;}
+.col9{width: 75%; padding: 1rem;}
+.col10{width: 88.88%; padding: 1rem;}
+.col11{width: 91.66%; padding: 1rem;}
+.col12{width: 100%; padding: 1rem;}
+
+.h-30{height: 30px;}
+.h-100{height: 100px;}
+.h-100{height: 150px;}
+.h-100{height: 200px;}
+.h-100{height: 300px;}
+
+.text-mainTitle{font-weight: 500; font-size: 3.2rem;}
+.text-subTitle{font-weight: 300; font-size: 2rem;}
+.text-menu{font-size: 1.6rem; font-weight: 700;}
+.text-kr-normal{font-family: "Noto Sans KR", sans-serif;}
+.text-en-normal{font-family: "Newsreader", sans-serif;}
+
+.text-white{color: white;}
+.text-gray{color: rgb(44, 49, 69);}
+.text-red{color: rgb(255, 0, 0);}
+
+.text-center{text-align: center;}
+.text-left{text-align: left;}
+.text-right{text-align: right;}
+
+.img-fit{width: 100%;}
+
+.imageEffectHardlight {
+    mix-blend-mode: hard-light;
+    filter: contrast(1.5);
+}
+
+.imageEffectScreen {
+    mix-blend-mode: screen;
+    filter: contrast(1.5);
+}
+
+.no-drag{
+    user-select: none;
+}
+
+
+
+/* 푸터 */
+footer{
+    height: 100px;
+    margin: 50px;
+    justify-content: space-between;
+}
+
+/* 커서 */
+.cursor {
+     /* 원의 크기 설정 */
+    width: 80px;
+    height: 100%;
+    background-image: url(Img/cursur/cursurGun.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    transition: transform 0.1s ease;
+    z-index: 1000;
+  }
+
