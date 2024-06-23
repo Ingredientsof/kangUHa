@@ -224,6 +224,27 @@ header p {
 }
 
 
+.overlay12 {
+    position: absolute;
+    top: 8px;
+    left: 730px;
+    width: 568px;
+    height: 379px;
+    background-color: rgba(0, 0, 0, 0); /* 투명하게 설정 */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    opacity: 0;
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+}
+
+.image-container12:hover .overlay12 {
+    background-color: rgba(0, 0, 0, 0.5); /* 호버 시 어둡게 변함 */
+    opacity: 1;
+}
+
 
 
 /* 이미지 우짜지 */

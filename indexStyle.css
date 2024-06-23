@@ -200,19 +200,28 @@ header p {
 }
 
 
-.overlay-container1:hover .overlay-color1 {
-    display: block;
-}
+.overlay-container1:hover .overlay-color1,
 .overlay-container2:hover .overlay-color2 {
     display: block;
 }
 
-.overlay-container1:hover .overlay-text1 {
-    opacity: 1; /* 호버 시 텍스트 나타나기 */
-}
+.overlay-container1:hover .overlay-text1,
 .overlay-container2:hover .overlay-text2 {
     opacity: 1; /* 호버 시 텍스트 나타나기 */
 }
+
+/* 나 어떡하냐고 */
+.overlay-container1:not(:hover) .overlay-color1,
+.overlay-container2:not(:hover) .overlay-color2 {
+    display: none;
+}
+
+.overlay-container1:not(:hover) .overlay-text1,
+.overlay-container2:not(:hover) .overlay-text2 {
+    opacity: 0; 
+}
+
+
 
 
 .row{
@@ -606,6 +615,7 @@ header p {
 
 .text-mainTitle{font-weight: 500; font-size: 3.2rem;}
 .text-subTitle{font-weight: 300; font-size: 2rem;}
+.text-HsubTitle{font-weight: 400; font-size: 2rem;}
 .text-menu{font-size: 1.6rem; font-weight: 700;}
 .text-kr-normal{font-family: "Noto Sans KR", sans-serif;}
 .text-en-normal{font-family: "Newsreader", sans-serif;}
@@ -660,3 +670,6 @@ footer{
     z-index: 1000;
   }
 
+  .no_event {
+    pointer-events: none;
+  }
