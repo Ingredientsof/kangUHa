@@ -210,18 +210,6 @@ header p {
     opacity: 1; /* 호버 시 텍스트 나타나기 */
 }
 
-/* 나 어떡하냐고 */
-.overlay-container1:not(:hover) .overlay-color1,
-.overlay-container2:not(:hover) .overlay-color2 {
-    display: none;
-}
-
-.overlay-container1:not(:hover) .overlay-text1,
-.overlay-container2:not(:hover) .overlay-text2 {
-    opacity: 0; 
-}
-
-
 
 
 .row{
